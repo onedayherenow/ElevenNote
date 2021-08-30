@@ -58,6 +58,7 @@ namespace ElevenNote.Services
 			}
 		}
 
+		//GET BY ID ---  READ BY ID
 		public NoteDetail GetNoteById(int id)
 		{
 			using (var ctx = new ApplicationDbContext())
@@ -78,6 +79,7 @@ namespace ElevenNote.Services
 			}
 		}
 
+		//UPDATE
 		public bool UpdateNote(NoteEdit model)
 		{
 			using (var ctx = new ApplicationDbContext())
@@ -95,6 +97,7 @@ namespace ElevenNote.Services
 			}
 		}
 
+		// DELETE
 		public bool DeleteNote(int noteId)
 		{
 			using (var ctx = new ApplicationDbContext())
