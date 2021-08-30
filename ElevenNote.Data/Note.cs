@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ElevenNote.Data
 {
@@ -16,5 +17,11 @@ namespace ElevenNote.Data
 		[Required]
 		public DateTimeOffset CreatedUtc { get; set; }
 		public DateTimeOffset? ModifiedUtc { get; set; }
+
+		// One-To-Many Relationship ; One Category can have many notes
+		
+		[ForeignKey(nameof(Category))] 
+		public int CategoryID { get; set; }  // Foreign Key --- Navigational Property
+		public virtual Category Category { get; set; }  // Entity  -- What goes into the database
 	}
 }

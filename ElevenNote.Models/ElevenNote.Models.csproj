@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryCreate.cs" />
     <Compile Include="NoteEdit.cs" />
     <Compile Include="NoteCreate.cs" />
     <Compile Include="NoteDetail.cs" />
